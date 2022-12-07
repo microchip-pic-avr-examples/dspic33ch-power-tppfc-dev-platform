@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-## %repoDescritpion%
+## dspic33ch power tppfc dev platform
 
 Board Image if any.
 
