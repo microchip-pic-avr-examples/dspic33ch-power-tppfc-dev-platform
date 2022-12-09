@@ -1,0 +1,41 @@
+/*
+
+The purpose of this file is to help the user to orientate themselves with this firmware
+
+Highest priority: DMA interrupt. 
+DMA is connected to SPI received buffer
+see drv_dma.c
+
+Every 10us, we receive an SPI message containing 4 16-bit words. This is sent to the dsPIC33CH from the isolated voltage acquisition board.
+These words contain the 3 ADC readings of the 3 phase input voltages, the AC sense offset on the isolated voltage acquisition board and a 16-bit checksum.
+The receipt of this message triggeres a DMA interrupt, the source code for this is in drv_dma.c
+In this interrupt, we check that the SPI is connected (more on this later), and that the calculated and received checksum match.
+We then run a small state machine with the ultimate aim of processing the AC input voltage data.
+The first state is run only at startup, here we read the AC sense offset from the SPI messages and store the result.
+Then we move onto the "online" state.
+In this state we first unpack the 12-bit ADC readings (3 phase voltages). We thrn process these measurements.
+For example, we need to find when each phase voltage is in its "zero cross" region, determine polarity, compute the feed-forward term for the 
+current loops running on the secondary core. The source code for this piece is located in vac_monitor.c.
+Finally, we need to send this processed data across to the secondary core (where the control loops and PFC state machine are executed).
+This is done via a mailbox. 
+This is done in the functions DMA_Channel_updateCoreBuffers() and DMA_Channel_resetAcMonitor()
+Thus every 10us, we send processed AC monitor data to the secondary core.
+
+Lower Priority: background loops
+See main.c and main_tasks.c
+Comms handlers are run here.
+I2C message is received every 50ms from PIC16 on main power board. We poll the I2C interupt flag in the background loop.
+We also run a 100us scheduler. This is driven from timer 1, we poll the timer 1 interrupt flag in the background loop. It is not an interrupt driven process.
+Here we check if any CAN messages were received from the Power Board Visualizer GUI: CAN_Receive_from_GUI()
+We also periodically send CAN data to the Power Board Visualizer GUI: CAN_Transmit_to_GUI()
+In CAN_Transmit_to_GUI(), we check the 32-word FIFO from secondary to primary core, if this has been filled with data by the secondary core, we create a 64-byte CAN message containing
+relavant PFC status information and send to Power Board Visualizer GUI via CAN.
+We also run a simple I2C timeout function Drv_I2C_Timeout(), which sets an error flag if an I2C message has not been received in the last 60ms.
+We also run a SPI timeout routine. If no SPI comms was received within last 1ms, we say that the SPI is "not connected".
+Note that for SPI we only have SPI clock and SPI MOSI coming from isolated voltage acquisition board.
+We don't have SPI_CS to frame the data. Hence we only enable SPI and DMA in-between received SPI messages, that is, when the SPI bus is idle.
+See function SPI_Synchronize() for more information. We expect SPI messages to arrive every 10us.
+When SPI bus is idle, the SPI clock line is high continuously. It should be high for around 2us between SPI messages, assuming 4 16-bit words at SPI clock of 10MHz, and new message every 10us.
+Hence in this function, we enable the SPI and DMA peripherals when the SPI clock line has been high for 1us.
+
+*/

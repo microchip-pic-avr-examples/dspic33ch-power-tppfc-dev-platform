@@ -1,0 +1,97 @@
+<<------------------------------------------------------------------------------
+2.11.2022
+
+Sec V4.1.0.0
+
+all signal functions as general inline:
+VOUTaveraging
+ZeroCross_PHx
+SoftstartAfterZC_PHx
+CCM_PHx
+DutyCycleFeedForward_PHx
+
+ToDo:
+test 1Ph with/out dff
+test 1Ph Voltage and Current Loop
+test HV
+
+!!!! if single phase mode used (PFC on) and all 3 phases are ON 
+then N-fuse will brake
+
+<<------------------------------------------------------------------------------
+3.11.2022
+
+Sec V4.1.1.0
+
+capbal removed but left in statemachine unused
+Phase1/2/3 files removed
+
+<<------------------------------------------------------------------------------
+7.11.2022
+
+Sec V4.1.2.0 and 4.1.2.1
+
+startup reworked: 
+capbal removed
+added states PCS_DELAY_AFTER_RELAYON  and PCS_START_CONTROL
+PCS_DELAY_AFTER_RELAYON is a delay to activate the relay on bits for power control
+PCS_START_CONTROL is a delay to start/reset contol loops and wait until Vout is out 
+of the ramp after relay on to start soft-start with actual Vout measured
+
+Tests:
+startup phases
+PWM glitch after enable and switch on after ZC
+states added or remove together, define the states meaning
+
+<<------------------------------------------------------------------------------
+8.11.2022
+
+Sec V4.1.2.0 and 4.1.2.1
+
+clean up (ongoing with Shrikants advice/help)
+code is performance optimized
+ADC ISR timing < 7.9us
+restructured files for inlining (always inlined ??)
+general handlers for phaseX
+Bitbucket/Jira (Cormac)
+LV and HV tests (Milan)
+
+<<------------------------------------------------------------------------------
+9.11.2022
+
+VMC Tests um festzustellen wo die max. ISR Time von8.5us herkommt was nur sehr selten passiert.
+
+Power Smart tests: only considered for 1Phase. 3 Phase current handling with 
+                   compensator array is not possible. Only wioht some prelim. code.
+                   Prelim code is made for dedicated epc example and too riscy to use.
+
+<<------------------------------------------------------------------------------
+2.12.2022
+
+Timing further optimized. ADC ISR timing < 7.4us for 3 Phase without dff.
+dff does not improve either 1-Ph nor 3-Ph.
+Dedicated DCDT files for different modes. 1/3 Phase HV/LV.
+modes tested:
+1-Ph LV: PFC 
+1-Ph LV: Inverter: ref=1600 (6.2A) --> 1600/8(shift)/4096*3.3V/0.025V
+1-Ph HV: PFC
+2-Ph LV (L1/L3): PFC
+3-Ph LV: PFC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
