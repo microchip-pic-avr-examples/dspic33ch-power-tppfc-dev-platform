@@ -3,26 +3,26 @@
    "category":"com.microchip.ide.project",
    "content":{
       "metaDataVersion":"1.3.0",
-      "name":"com.microchip.mplabx.project.dspic33ch-power-tppfc-dev-platform",
-      "version":"x.x.x",
-      "displayName":"xxxxxxxxxxxxxxx",
-      "projectName":"dspic33ch-power-tppfc-dev-platform",
-      "shortDescription":"xxxxxxxxxxxxxxx",
+      "name":"com.microchip.mplabx.project.tppfc_main_controller_secondary",
+      "version":"4.2.3",
+      "displayName":"Secondary core MPLABx project for Totem Pole PFC main controller",
+      "projectName":"tppfc_main_controller_primary",
+      "shortDescription":"Secondary core MPLABx project for Totem Pole PFC main controller",
       "ide":{
          "name":"MPLABX",
-         "semverRange":">=5.40.0"
+         "semverRange":">=6.0.0"
       },
       "compiler":{
          "name":"XC16",
-         "semverRange":"^1.50.0"
+         "semverRange":"^1.7.0"
       },
       "dfp":{
-         "name":"xxxxxxxxxxxxxxx",
-         "semverRange":">=x.x.x"
+         "name":"dsPIC33CH-MP_DFP",
+         "semverRange":">=1.11.240"
       },
 	  "configurator": {
          "name": "MCC",
-         "semverRange": ">=4.0.1"
+         "semverRange": ">=5.1.17"
       },
       "device":{
          "metaDataVersion":"1.0.0",
@@ -30,16 +30,33 @@
          "content":{
             "metaDataVersion":"1.0.0",
             "category":"com.microchip.device",
-            "name":"xxxxxxxxxxxxxxx",
+            "name":"dsPIC33CH512MP506",
             "versionRange":"*"
          }
       },
 	  "peripherals":[
-         "GPIO"
+         "GPIO",
+		 "PORT",
+         "PWM",
+		 "ADC",
+		 "DMA",
+		 "SPI"
+		 "DAC",
+		 "I2C",
+		 "Timer"
       ],
       "keywords":[
-         "GPIO",
-         "UART"
+		 "DSC",
+		 "dsPIC",
+		 "Power",
+		 "Power-Conversion",
+		 "Power-Supply",
+		 "SMPS",
+		 "Digital Power",
+		 "Digital Signal Processing/ Filters"
+		 "PFC",
+		 "Power Factor Correction",
+		 "Totem Pole"
       ]
    }
 }
