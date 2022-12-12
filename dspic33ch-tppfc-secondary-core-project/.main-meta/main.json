@@ -49,14 +49,12 @@
 		 "DSC",
 		 "dsPIC",
 		 "Power",
-		 "Power-Conversion",
-		 "Power-Supply",
+		 "Power Conversion",
+		 "Power Supply",
 		 "SMPS",
 		 "Digital Power",
-		 "Digital Signal Processing/ Filters"
 		 "PFC",
 		 "Power Factor Correction",
-		 "Totem Pole"
       ]
    }
 }
