@@ -13,7 +13,7 @@
 *.elf
 
 # Executables
-# *.exe
+*.exe
 
 # Netbeans specific
 ~*.*
