@@ -285,7 +285,7 @@
       </C30-LD>
       <C30Global>
         <property key="combine-sourcefiles" value="false"/>
-        <property key="common-include-directories" value=""/>
+        <property key="common-include-directories" value="dcdt"/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
         <property key="generic-16-bit" value="false"/>

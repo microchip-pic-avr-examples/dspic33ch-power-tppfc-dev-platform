@@ -46,12 +46,12 @@
 
 #include <xc.h> 
 #include "smps_control.h"   //interfaces to Switch Mode Power Supply compensator library.
-#include "../../../dcdt/icomp1lv/dcdt_generated_code/icomp1lv_dcdt.h"
-#include "../../../dcdt/icomp1hv/dcdt_generated_code/icomp1hv_dcdt.h"
-#include "../../../dcdt/icomp3lv/dcdt_generated_code/icomp3lv_dcdt.h"
-#include "../../../dcdt/icomp3hv/dcdt_generated_code/icomp3hv_dcdt.h"
-#include "../../../dcdt/vcomp1ph/dcdt_generated_code/vcomp1ph_dcdt.h"
-#include "../../../dcdt/vcomp3ph/dcdt_generated_code/vcomp3ph_dcdt.h"
+#include "icomp1lv/dcdt_generated_code/icomp1lv_dcdt.h" // included from 'dcdt' subdirectory
+#include "icomp1hv/dcdt_generated_code/icomp1hv_dcdt.h" // included from 'dcdt' subdirectory
+#include "icomp3lv/dcdt_generated_code/icomp3lv_dcdt.h" // included from 'dcdt' subdirectory
+#include "icomp3hv/dcdt_generated_code/icomp3hv_dcdt.h" // included from 'dcdt' subdirectory
+#include "vcomp1ph/dcdt_generated_code/vcomp1ph_dcdt.h" // included from 'dcdt' subdirectory
+#include "vcomp3ph/dcdt_generated_code/vcomp3ph_dcdt.h" // included from 'dcdt' subdirectory
 
 //#include "drv_pwrctrl_app_TPBLPFC.h"
 
