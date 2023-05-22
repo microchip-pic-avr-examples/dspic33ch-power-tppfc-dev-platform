@@ -121,11 +121,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.13.354"/>
+        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.12.352"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
