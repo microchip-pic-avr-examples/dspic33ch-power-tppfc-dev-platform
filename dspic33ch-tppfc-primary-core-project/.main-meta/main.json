@@ -34,17 +34,6 @@
             "versionRange":"*"
          }
       },
-	  "peripherals":[
-         "GPIO",
-		 "PORT",
-         "PWM",
-		 "ADC",
-		 "DMA",
-		 "SPI"
-		 "DAC",
-		 "I2C",
-		 "Timer"
-      ],
       "keywords":[
 		 "DSC",
 		 "dsPIC",
