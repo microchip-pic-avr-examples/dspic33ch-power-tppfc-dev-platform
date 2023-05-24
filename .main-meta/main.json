@@ -34,9 +34,6 @@
             "versionRange":"*"
          }
       },
-	  "peripherals":[
-         "GPIO"
-      ],
       "keywords":[
          "GPIO",
          "UART"
