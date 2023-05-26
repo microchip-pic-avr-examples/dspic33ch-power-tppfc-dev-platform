@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>tppfc_main_controller_secondary</name>
+            <name>TPBLPFC_Secondary_Modes1Ph3Ph_V4</name>
+            <name>TPBLPFC_Secondary_Modes1Ph3Ph_V3_0</name>
+            <name>TPBLPFC_Secondary_Modes1Ph3Ph_V2_0</name>
+            <name>TPBLPFC_Secondary_Modes1Ph3Ph</name>
+            <name>TPBLPFC_Secondary_SinglePH1</name>
+            <name>3PhTPBLPFC_Secondary_SinglePH1</name>
+            <name>Slave3PhTPBLPFC_DCDT_PHx_CA</name>
+            <name>Slave3PhTPBLPFC_DCDT_PHx</name>
+            <name>Slave3PhTPBLPFC_DCDT</name>
+            <name>Slave3PhTPBLPFCforward</name>
+            <creation-uuid>cdb1b0b9-fdee-485e-8d62-83d89790dfee</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions>inc</asminc-extensions>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>..</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
