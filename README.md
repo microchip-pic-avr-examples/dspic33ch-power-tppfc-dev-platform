@@ -186,4 +186,4 @@ See below for a top-level overview of the firmware running on each microcontroll
 
 - - -
 
-&copy; 2022, Microchip Technology Inc.
+&copy; 2023, Microchip Technology Inc.
