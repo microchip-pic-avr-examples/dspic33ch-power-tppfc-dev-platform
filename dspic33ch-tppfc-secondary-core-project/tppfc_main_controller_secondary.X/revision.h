@@ -31,24 +31,24 @@
 #ifndef REVISION_H
 #define	REVISION_H
 
-#define MAJOR       '4'
-#define MINOR       '2'
-#define PATCH       '3'
+#define MAJOR       '1'
+#define MINOR       '0'
+#define PATCH       '0'
 
 /*******************************************************************************
- * @fn      revision history 4.2.2.0
+ * @fn      revision history 0.2.2.0
  * @details dedicated compensators for 1/3Ph and LV/HV added
  *          selected via #ifdefs in drv_controller_TPBLPFC.c                      
  *                                
  *******************************************************************************/
 /*******************************************************************************
- * @fn      revision history 4.2.1.0
+ * @fn      revision history 0.2.1.0
  * @details ADCON0 ISR optimized: 7.4us with out dff
  *                                8.2us with dff
  *          Single Phase 2 legs IL is based on L1 and L3                      
  *******************************************************************************/
 /*******************************************************************************
- * @fn      revision history 4.2.0.0
+ * @fn      revision history 0.2.0.0
  * @details delay after relay on and wait until startup ramp both set to 50ms
  *          ADCON0 ISR optimized
  *          Single Phase 2 legs IL is based on L1 and L2 

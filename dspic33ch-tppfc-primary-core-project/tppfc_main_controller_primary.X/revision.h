@@ -31,7 +31,7 @@
 #ifndef REVISION_H
 #define	REVISION_H
 
-#define REV_MAJOR       '3'
+#define REV_MAJOR       '1'
 #define REV_MINOR       '0'
 #define REV_PATCH       '0'
 #define HIGH_VOLTAGE    '0'
