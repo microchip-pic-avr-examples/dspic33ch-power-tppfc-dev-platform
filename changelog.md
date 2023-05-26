@@ -1,4 +1,4 @@
-# dspic33ch-power-tppfc-dev-platform v1.00
+# dspic33ch-power-tppfc-dev-platform v1.0.0
 ### Release Highlights
 
 
