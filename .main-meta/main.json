@@ -6,7 +6,7 @@
       "name":"com.microchip.mplabx.project.dspic33ch-power-tppfc-dev-platform",
       "version":"1.0.0",
       "displayName":"Dual core MPLABx projects for 11kW Totem Pole Demonstration Application Platform",
-      "projectName":"tppfc_main_controller_primary",
+      "projectName":"dspic33ch-power-tppfc-dev-platform",
       "shortDescription":"Main and Secondary core MPLABx projects for 11kW Totem Pole Demonstration Application Platform",
       "ide":{
          "name":"MPLABX",
