@@ -33,12 +33,13 @@
 
 #define REV_MAJOR       '1'
 #define REV_MINOR       '0'
-#define REV_PATCH       '0'
+#define REV_PATCH       '1'
 #define HIGH_VOLTAGE    '0'
 
 //------------------------------------------------------------------------------
 // revision history
 //------------------------------------------------------------------------------
-//
+// v1.0.1
+// Git LFS no longer used to track mc3 files (these are used by MCC)
 #endif	/* REVISION_H */
 

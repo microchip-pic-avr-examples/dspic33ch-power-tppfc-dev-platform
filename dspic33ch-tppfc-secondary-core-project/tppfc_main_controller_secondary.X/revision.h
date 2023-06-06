@@ -33,7 +33,14 @@
 
 #define MAJOR       '1'
 #define MINOR       '0'
-#define PATCH       '0'
+#define PATCH       '1'
+
+
+/*******************************************************************************
+ * @fn      revision history 1.0.1
+ * @details Git LFS no longer used to track mc3 files (these are used by MCC)
+ *          
+ *******************************************************************************/
 
 /*******************************************************************************
  * @fn      revision history 0.2.2.0
