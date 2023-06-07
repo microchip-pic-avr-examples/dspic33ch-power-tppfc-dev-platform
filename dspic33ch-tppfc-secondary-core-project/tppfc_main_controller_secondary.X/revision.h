@@ -33,7 +33,7 @@
 
 #define MAJOR       '1'
 #define MINOR       '0'
-#define PATCH       '0'
+#define PATCH       '2'
 
 /*******************************************************************************
  * @fn      revision history 0.2.2.0

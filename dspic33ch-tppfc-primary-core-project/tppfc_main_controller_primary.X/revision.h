@@ -33,7 +33,7 @@
 
 #define REV_MAJOR       '1'
 #define REV_MINOR       '0'
-#define REV_PATCH       '0'
+#define REV_PATCH       '2'
 #define HIGH_VOLTAGE    '0'
 
 //------------------------------------------------------------------------------
